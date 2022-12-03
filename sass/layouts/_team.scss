@@ -2,15 +2,14 @@
     background-color: var(--secondary-background-color);
 }
 
-.team-list {
+.team__list {
     display: flex;
     gap: var(--card-set-gap);
 
-    font-size: 16px;
-    line-height: 1.12;
+    @include font (null, 16px, 1.12, null);
 }
 
-.team-list-item {
+.team__item {
     flex-basis: calc((100% - 3 * var(--card-set-gap)) / 4);
 
     background-color: var(--primary-background-color);
@@ -18,60 +17,55 @@
     border-radius: 0px 0px 4px 4px;
 }
 
-.team-list-description {
+.team__description {
     padding: 30px 0;
     text-align: center;
 }
 
-.team-item-title {
+.team__subtitle {
     margin-bottom: 10px;
 
     color: var(--secondary-text-color);
-    font-weight: 500;
-    font-size: 16px;
+    @include font (500, 16px, null, null);
 }
 
-.team-text {
+.team__text {
     margin-bottom: 16px;
 }
 
-.team-soc-list {
+.soc-list {
     display: flex;
     justify-content: center;
     gap: 10px;
 }
 
-.team-soc-item {
+.soc-list__item {
     width: 44px;
     height: 44px;
 }
 
-.team-soc-link {
-    display: flex;
+.soc-list__link {
+    @include flex;
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    align-items: center;
-    justify-content: center;
     background-color: var(--primary-background-color);
 
     transition: background-color var(--transition);
-
     &:hover,
     &:focus {
             background-color: var(--accent-color);
         }
 }
 
-.team-soc-icon {
+.soc-list__icon {
     fill: var(--icon-color);
     width: 20px;
     height: 20px;
 
     transition: fill var(--transition);
-
-    .team-soc-link:hover &,
-    .team-soc-link:focus & {
+    .soc-list__link:hover &,
+    .soc-list__link:focus & {
     fill: var(--primary-white-color);
     }
 }

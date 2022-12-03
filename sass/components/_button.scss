@@ -3,16 +3,13 @@
     border-radius: 4px;
 }
 
-.button.primary {
+.button--primary {
     min-width: 216px;
     height: 50px;
 
     color: var(--primary-white-color);
     background-color: var(--accent-color);
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.86;
-    letter-spacing: 0.06em;
+    @include font (700, 16px, 1.86, 0.06em);
 
     transition: background-color var(--transition);
     &:hover,
@@ -21,19 +18,15 @@
     }
 }
 
-.button.secondary {
+.button--secondary {
     padding: 6px 22px;
-
     color: var(--secondary-text-color);
     background-color: var(--secondary-background-color);
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.63;
-    letter-spacing: 0.03em;
+    @include font (500, 16px, 1.63, 0.03em);
 
     transition: background-color var(--transition),
-        color var(--transition),
-        box-shadow var(--transition);
+                color var(--transition),
+                box-shadow var(--transition);
     &:hover,
     &:focus {
     color: var(--primary-white-color);

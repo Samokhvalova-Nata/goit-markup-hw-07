@@ -10,16 +10,13 @@
         url(../images/Hero.jpg);
 }
 
-.hero-title {
+.hero__title {
     max-width: 696px;
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 30px;
 
     color: var(--primary-white-color);
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
-    letter-spacing: 0.06em;
+    @include font (900, 44px, 1.36, 0.06em);
     text-transform: uppercase;
 }

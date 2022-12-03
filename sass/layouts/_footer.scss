@@ -6,23 +6,23 @@
     color: var(--primary-white-color);
 }
 
-.footer-wrap {
+.footer__wrap {
     display: flex;
     align-items: baseline;
 }
 
-.footer-logo {
+.footer__logo {
     display: block;
     margin-bottom: 20px;
 
     color: var(--primary-white-color);
 }
 
-.footer-contacts-list {
+.footer-contacts__list {
     line-height: 1.71;
 }
 
-.footer-contacts-list .link {
+.footer-contacts__link {
     display: block;
     margin-top: 9px;
 
@@ -36,40 +36,33 @@
         }
 }
 
-
 .footer-socials {
     margin-left: 70px;
 }
 
-.footer-socials-title {
+.footer-socials__title {
     margin-bottom: 20px;
-
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
+    @include font (700, 14px, 1.14, 0.03em);
     text-transform: uppercase;
     color: var(--primary-white-color);
 }
 
-.footer-socials-list {
+.footer-socials__list {
     display: flex;
     justify-content: center;
     gap: 10px;
 }
 
-.footer-socials-item {
+.footer-socials__item {
     width: 44px;
     height: 44px;
 }
 
-.footer-socials-link {
-    display: flex;
+.footer-socials__link {
+    @include flex;   
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    align-items: center;
-    justify-content: center;
     background-color: rgba(255, 255, 255, 0.1);
 
     transition: background-color var(--transition);
@@ -79,7 +72,7 @@
         }
 }
 
-.footer-socials-icon {
+.footer-socials__icon {
     fill: var(--primary-white-color);
     width: 20px;
     height: 20px;
@@ -89,22 +82,19 @@
     margin-left: 93px;
 }
 
-.footer-send-title {
+.footer-send__title {
     margin-bottom: 20px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
+    @include font (700, 14px, 1.14, 0.03em);
     text-transform: uppercase;
     color: var(--primary-background-color);
 }
 
-.footer-send-form {
+.footer-send__form {
     display: flex;
     gap: 12px;
 }
 
-.footer-send-input {
+.footer-send__input {
     width: 358px;
     height: 50px;
     padding-left: 16px;
@@ -128,21 +118,15 @@
         }    
 }
 
-.footer-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+.footer-send__btn {
+    @include flex;
     min-width: 200px;
     height: 50px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
     color: var(--primary-white-color);
     background-color: var(--accent-color);
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.86;
-    letter-spacing: 0.06em;
+    @include font (700, 16px, 1.86, 0.06em);
 
     transition: background-color var(--transition);
     &:hover,
@@ -151,7 +135,7 @@
         }
 }
 
-.footer-send-icon {
+.footer-send__icon {
     fill: var(--primary-white-color);
     margin-left: 10px;
 }
