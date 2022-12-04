@@ -91,9 +91,8 @@
     fill: var(--primary-text-color);
 
     transition: fill var(--transition);
-
-    .contacts-link:hover &,
-    .contacts-link:focus & {
+    .header-contacts__link:hover &,
+    .header-contacts__link:focus & {
     fill: var(--accent-color);
     }
 }
